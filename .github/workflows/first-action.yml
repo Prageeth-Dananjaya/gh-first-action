@@ -12,7 +12,9 @@ jobs:
     # Step identifiers should start with a "-"  and run keyword refers to the command that should run on cmd
     steps:
       - name: Print greeting
-        run: echo "Hello World!"  
+        run: |
+            echo "Hello World!"  
+            echo "Welcome!"
       - name: Say goodbye
         run: echo "Good Bye!"
     
