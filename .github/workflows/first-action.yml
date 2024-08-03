@@ -1,0 +1,18 @@
+# Name of the workflow
+name: First Workflow
+# When this workflow should be executed
+# After on: keyword we should we add events that trigger the workflow
+on: workflow_dispatch # workflow_dispatch - Event that wait for users to manually trigger the workflows
+# First we have to define jobs 
+# Next identifier for each job
+# Next the runner or the environment where the job runs -> key word runs-on
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    # Step identifiers should start with a "-"  and run keyword refers to the command that should run on cmd
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"  
+      - name: Say goodbye
+        run: echo "Good Bye!"
+    
